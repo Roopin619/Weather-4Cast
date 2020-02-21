@@ -1,0 +1,91 @@
+body {
+    font-family: 'Lato', sans-serif;
+    max-width: 700px;
+    min-height: 95vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 32px;
+}
+
+.default {
+    background: url('../img/default.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.sunny {
+    background: url('../img/sunny.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.rainy {
+    background: url('../img/rainy.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.cloudy {
+    background: url('../img/cloudy.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.snowy {
+    background: url('../img/snowy.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+div {
+    margin-top: 48px;
+    flex-grow: 1;
+}
+
+div p {
+    font-size: 18px;
+}
+
+footer {
+    color: #5f6769;
+    border-top: 1px solid #eeeeee;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    color: #373640;
+    text-shadow: 3px 0 #929aab;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+a {
+    color: #3a3535;
+    padding: 0 8px;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+input {
+    border: 1.5px solid #888888;
+    padding: 8px;
+    border-radius: 5px;
+    background: transparent;
+    margin: 0 5px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    border-radius: 5px;
+    background: #888888;
+    padding: 8px;
+    color: white;
+}
+
+#message-1 {
+    font-weight: bold;
+    font-size: 24px;
+}
