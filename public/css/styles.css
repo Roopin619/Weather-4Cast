@@ -1,12 +1,11 @@
 body {
     font-family: 'Lato', sans-serif;
-    max-width: 700px;
-    min-height: 95vh;
+    max-width: 650px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 32px;
+    min-height: 100vh;
 }
 
 .default {
@@ -34,30 +33,41 @@ body {
     background-size: cover;
 }
 
-div {
-    margin-top: 48px;
+.content {
     flex-grow: 1;
+    padding-top: 32px;
 }
 
-div p {
-    font-size: 18px;
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
 }
 
 footer {
-    color: #5f6769;
+    color: grey;
     border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 8px 0;
+}
+
+footer p {
+    font-size: 16px;
 }
 
 h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 80px;
+    margin-bottom: 16px;
     color: #373640;
     text-shadow: 3px 0 #929aab;
-    margin-bottom: 16px;
     margin-top: 0;
 }
 
-a {
+p {
+    font-size: 18px;
+}
+
+header a {
     color: #3a3535;
     padding: 0 8px;
     margin-right: 16px;
@@ -88,4 +98,10 @@ button {
 #message-1 {
     font-weight: bold;
     font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        width: 100%;
+    }
 }

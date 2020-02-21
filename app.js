@@ -18,10 +18,7 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/help', (req, res) => {
-  res.render('help', {
-    helpText: 'This is some helpful text.',
-    title: 'Help',
-  });
+  res.render('help', { title: 'Help' });
 });
 
 app.get('/weather', (req, res) => {

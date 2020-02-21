@@ -1,21 +1,37 @@
-{{>header}}
+<!DOCTYPE html>
+<html>
 
-<div>
-    <p>Use this site to get your weather!</p>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather 4Cast</title>
+    <link rel="icon" href="img/forecast.png">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Dancing+Script:700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 
-    <form>
-        <input type="text" placeholder="&#xf002;   Location"
-            style="font-family: FontAwesome, Arial; font-style: normal">
-        <button>Search</button>
-    </form>
+<body class="default">
+    <div class="content">
+        {{>header}}
 
-    <p id="message-1"></p>
-    <p id="message-2"></p>
-    <p id="message-3"></p>
-    <p id="message-4"></p>
-    <p id="message-5"></p>
-</div>
+        <p>Use this site to get your weather!</p>
 
-<script src="js/app.js"></script>
+        <form>
+            <input type="text" placeholder="&#xf002;   Location"
+                style="font-family: FontAwesome, Arial; font-style: normal">
+            <button>Search</button>
+        </form>
 
-{{>footer}}
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+        <p id="message-3"></p>
+        <p id="message-4"></p>
+        <p id="message-5"></p>
+    </div>
+
+    {{>footer}}
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
