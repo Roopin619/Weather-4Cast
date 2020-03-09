@@ -1,4 +1,6 @@
 body {
+    background: url('../img/default.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Lato', sans-serif;
     max-width: 650px;
     margin: 0 auto;
@@ -6,31 +8,6 @@ body {
     flex-direction: column;
     text-align: center;
     min-height: 100vh;
-}
-
-.default {
-    background: url('../img/default.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-.sunny {
-    background: url('../img/sunny.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-.rainy {
-    background: url('../img/rainy.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-.cloudy {
-    background: url('../img/cloudy.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-.snowy {
-    background: url('../img/snowy.jpg') no-repeat center center fixed;
-    background-size: cover;
 }
 
 .content {

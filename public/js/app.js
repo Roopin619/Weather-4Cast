@@ -29,21 +29,14 @@ weatherForm.addEventListener('submit', (e) => {
                 messageFour.textContent = "Maximum Temperature : " + data.forecastData.maxTemp + " °C.";
                 messageFive.textContent = "There is a " + data.forecastData.precipProbability + "% chance of rain.";
 
-                if (data.forecastData.precipProbability > 30) {
-                    bodyElement.classList.remove(bodyElement.classList[0]);
-                    bodyElement.classList.add('rainy');    
-                } 
-                else if (data.forecastData.currentTemp > 30) {
-                    bodyElement.classList.remove(bodyElement.classList[0]);
-                    bodyElement.classList.add('sunny');
-                }
-                else if (data.forecastData.currentTemp < 5) {
-                    bodyElement.classList.remove(bodyElement.classList[0]);
-                    bodyElement.classList.add('snowy');
-                }
-                else {
-                    bodyElement.classList.remove(bodyElement.classList[0]);
-                    bodyElement.classList.add('cloudy');  
+                if (data.forecastData.precipProbability > 40) {
+                    bodyElement.style.backgroundImage = "url('../img/rainy.jpg')";
+                } else if (data.forecastData.currentTemp > 30) {
+                    bodyElement.style.backgroundImage = "url('../img/sunny.jpg')";
+                } else if (data.forecastData.currentTemp < 5) {
+                    bodyElement.style.backgroundImage = "url('../img/snowy.jpg')";
+                } else {
+                    bodyElement.style.backgroundImage = "url('../img/cloudy.jpg')";
                 }
             }
         });
