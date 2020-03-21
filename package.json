@@ -9,11 +9,12 @@
   "author": "Roopin Bhadri",
   "license": "ISC",
   "engines": {
-    "node": "13.6.0"   
+    "node": "13.6.0"
   },
   "dependencies": {
     "express": "^4.17.1",
     "hbs": "^4.1.0",
+    "minimist": "^1.2.5",
     "request": "^2.88.2"
   }
 }
