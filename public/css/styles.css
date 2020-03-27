@@ -60,7 +60,7 @@ input {
     padding: 8px;
     border-radius: 5px;
     background: transparent;
-    margin: 0 5px;
+    /* margin: 0 5px; */
 }
 
 button {
@@ -70,6 +70,7 @@ button {
     background: #888888;
     padding: 8px;
     color: white;
+    margin-left: 5px;
 }
 
 #message-1 {
@@ -80,5 +81,8 @@ button {
 @media screen and (max-width: 768px) {
     .content {
         width: 100%;
+    }
+    #current-location {
+        margin-top: 8px;
     }
 }

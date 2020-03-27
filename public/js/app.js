@@ -6,11 +6,9 @@ const messageThree = document.querySelector('#message-3');
 const messageFour = document.querySelector('#message-4');
 const messageFive = document.querySelector('#message-5');
 const bodyElement = document.querySelector('body');
+const currentLocationButton = document.querySelector('#current-location');
 
-weatherForm.addEventListener('submit', (e) => {
-
-    e.preventDefault();      // to prevent refresh on form submission
-    const location = search.value;
+const fetchWeather = (url) => {
 
     messageOne.textContent = 'Loading...';
     messageTwo.textContent = '';
@@ -18,7 +16,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageFour.textContent = '';
     messageFive.textContent = '';
 
-    fetch('/weather?address=' + location).then((response) => {
+    fetch(url).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 messageOne.textContent = data.error;
@@ -40,5 +38,26 @@ weatherForm.addEventListener('submit', (e) => {
                 }
             }
         });
+    });
+}
+
+weatherForm.addEventListener('submit', (e) => {
+    e.preventDefault();      // to prevent refresh on form submission
+    const location = search.value;
+
+    fetchWeather(`/weather?address=${location}`);
+});
+
+currentLocationButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (!navigator.geolocation) {
+        return alert('Geolocation is not supported by your browser');
+    }
+
+    navigator.geolocation.getCurrentPosition((position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        fetchWeather(`/weather?lat=${latitude}&long=${longitude}`);
     });
 });

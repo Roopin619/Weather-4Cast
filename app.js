@@ -2,6 +2,7 @@ const express = require("express");
 const hbs = require("hbs");
 const geocode = require(__dirname + "/utils/geocode");
 const forecast = require(__dirname + "/utils/forecast");
+const reverseGeocode = require(__dirname + "/utils/reverse-geocode");
 
 const app = express();
 
@@ -22,27 +23,52 @@ app.get('/help', (req, res) => {
 });
 
 app.get('/weather', (req, res) => {
-  if (!req.query.address) {
+  if (!req.query.address && !req.query.lat) {
     return res.send({
       error: 'You must provide an address!'
     });
   }
 
-  geocode(req.query.address, (error, data) => {
-    if (error) {
-      return res.send({ error });
-    }
-
-    forecast(data.latitude, data.longitude, (error, forecastData) => {
+  if (req.query.address) {
+    geocode(req.query.address, (error, data) => {
       if (error) {
         return res.send({ error });
       }
-      res.send({
-        forecastData,
-        location: data.location
+
+      forecast(data.latitude, data.longitude, (error, forecastData) => {
+        if (error) {
+          return res.send({ error });
+        }
+        res.send({
+          forecastData,
+          location: data.location
+        });
       });
+
     });
-  });
+
+  } else {
+    const latitude = parseFloat(req.query.lat);
+    const longitude = parseFloat(req.query.long);
+
+    forecast(latitude, longitude, (error, forecastData) => {
+      if (error) {
+        return res.send({ error });
+      }
+
+      reverseGeocode(latitude, longitude, (error, location) => {
+        if (error) {
+          return res.send({ error });
+        }
+        res.send({
+          forecastData,
+          location
+        });
+      });
+
+    });
+  }
+  
 });
 
 app.listen(process.env.PORT || 3000, () => {
