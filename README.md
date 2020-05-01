@@ -1,8 +1,8 @@
 # Weather 4Cast
 
-[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=102)](https://github.com/Roopin619/task-manager-api)  &nbsp;&nbsp;
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Roopin619/task-manager-api)  &nbsp;&nbsp;
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Roopin619/task-manager-api)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=102)](https://github.com/Roopin619/Weather-4Cast)  &nbsp;&nbsp;
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Roopin619/Weather-4Cast)  &nbsp;&nbsp;
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Roopin619/Weather-4Cast)
 
 Use this site to get real-time weather :partly_sunny: details for any location across the globe :earth_americas: .
 This website uses Mapbox API to get the latitudes and longitudes for the entered location and Dark Sky API to fetch the corresponding weather details.
